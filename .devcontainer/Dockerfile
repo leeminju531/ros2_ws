@@ -1,15 +1,4 @@
-# build with althack's Docker images (https://github.com/athackst/dockerfiles)
-
-# FROM althack/ros2:humble-dev 
-
-# # Set up auto-source of workspace for ros user
-# ARG WORKSPACE
-# RUN echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/install/setup.bash; fi" >> /home/ros/.bashrc
-
-
-# =================================================
-
-# build with offical support (https://github.com/osrf/docker_images)
+# Build with offical support (https://github.com/osrf/docker_images)
 FROM osrf/ros:rolling-desktop-full
 
 ARG USERNAME=ros
