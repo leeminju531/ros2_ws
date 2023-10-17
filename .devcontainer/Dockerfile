@@ -23,3 +23,8 @@ RUN groupadd --gid $USER_GID $USERNAME \
 # see https://code.visualstudio.com/remote/advancedcontainers/change-default-source-mount
 ARG WORKSPACE=/workspaces/${USERNAME}
 RUN echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/install/setup.bash; fi" >> /home/ros/.bashrc
+
+
+# Preferred dep
+RUN apt-get update && apt-get install -y python3-pip \
+  && apt-get install -y vim
