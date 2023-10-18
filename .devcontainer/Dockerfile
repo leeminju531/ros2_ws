@@ -1,5 +1,6 @@
+ARG ws_distro
 # Build with offical support (https://github.com/osrf/docker_images)
-FROM osrf/ros:rolling-desktop-full
+FROM osrf/ros:${ws_distro}-desktop
 
 ARG USERNAME=ros
 ARG USER_UID=1000
@@ -25,6 +26,6 @@ ARG WORKSPACE=/workspaces/${USERNAME}
 RUN echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/install/setup.bash; fi" >> /home/ros/.bashrc
 
 
-# Preferred dep
+# Preferred dep to me.
 RUN apt-get update && apt-get install -y python3-pip \
   && apt-get install -y vim

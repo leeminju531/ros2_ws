@@ -3,7 +3,8 @@
 	"dockerFile": "Dockerfile",
 	"build": {
 		"args": {
-			"WORKSPACE": "${containerWorkspaceFolder}"
+			"WORKSPACE": "${containerWorkspaceFolder}",
+			"ws_distro": "${env:ws_distro}"
 		}
 	},
 	"remoteUser": "ros",
